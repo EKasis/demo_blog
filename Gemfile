@@ -1,8 +1,6 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.3.1'
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0.rc2'
 # Use sqlite3 as the database for Active Record
@@ -33,6 +31,11 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Bulma CSS
+gem 'bulma-rails', '~> 0.6.1'
+# Simple forms
+gem 'simple_form', '~> 3.5'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
@@ -48,6 +51,12 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  # Guard is a command line tool to easily handle events on file system modifications.
+  gem 'guard', '~> 2.14', '>= 2.14.1'
+  # reload the browser after changes to assets/helpers/tests 
+  gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false
+  # Make errors prettier
+  gem 'better_errors', '~> 2.4'
 end
 
 group :test do
